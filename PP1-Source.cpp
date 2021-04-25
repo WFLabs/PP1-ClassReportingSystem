@@ -13,7 +13,7 @@ using namespace std;
 // Struct for students
 struct Student {
 	string fName, lName;
-	float grade1, grade2, grade3, grade4, grade5, gradeAvg;
+	float grade1 =0, grade2 = 0, grade3 = 0, grade4 = 0, grade5 = 0, gradeAvg = 0;
 	};
 
 // Function prototypes
@@ -29,8 +29,6 @@ int main() {
 	vector<Student> vStudentList1;
 	vector<Student> vStudentList2;
 
-	Course c1, c2;
-	Student s1;
 	int ans;
 	char yn;
 
@@ -39,8 +37,8 @@ int main() {
 	cout << "Would you like to see available classes? (y or n)" << endl;					//Offer CourseList
 	cin >> yn;
 	if (yn == 'y') {
-		for (unsigned int i = 0; i < vCourseList.size(); ++i) {
-			vCourseList.at(i).PrintInfo();
+		for (auto courses : vCourseList) {
+			courses.PrintInfo();
 			cout << endl;
 		}
 	}
@@ -89,11 +87,13 @@ void OpenCIT1325(vector<Student>& list) {
 		list.push_back(s1);
 	} while (inFile.good());
 
-	for (unsigned int i = 0; i < list.size(); ++i) {
+
+	for (auto stud : list) {
 		string fullname;
-		fullname = list.at(i).fName + " " + list.at(i).lName;
-		cout << setw(20) << left << fullname << fixed << setprecision(1) << list.at(i).grade1 << "  " << list.at(i).grade2 << "  " << list.at(i).grade3 << "  " << list.at(i).grade4 << "  " << list.at(i).grade5 << "  " << list.at(i).gradeAvg << endl;
+		fullname = stud.fName + " " + stud.lName;
+		cout << setw(20) << left << fullname << fixed << setprecision(1) << stud.grade1 << "  " << stud.grade2 << "  " << stud.grade3 << "  " << stud.grade4 << "  " << stud.grade5 << "  " << stud.gradeAvg << endl;
 	}
+
 	return;
 }
 
@@ -117,10 +117,10 @@ void OpenCIT1350(vector<Student>& list) {
 		list.push_back(s1);
 	} while (inFile.good());
 
-	for (unsigned int i = 0; i < list.size(); ++i) {
+	for (auto stud : list) {
 		string fullname;
-		fullname = list.at(i).fName + " " + list.at(i).lName;
-		cout << setw(20) << left << fullname << fixed << setprecision(1) << list.at(i).grade1 << "  " << list.at(i).grade2 << "  " << list.at(i).grade3 << "  " << list.at(i).grade4 << "  " << list.at(i).grade5 << "  " << list.at(i).gradeAvg << endl;
+		fullname = stud.fName + " " + stud.lName;
+		cout << setw(20) << left << fullname << fixed << setprecision(1) << stud.grade1 << "  " << stud.grade2 << "  " << stud.grade3 << "  " << stud.grade4 << "  " << stud.grade5 << "  " << stud.gradeAvg << endl;
 	}
 	return;
 }
