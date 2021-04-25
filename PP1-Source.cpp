@@ -90,9 +90,10 @@ void OpenCIT1325(vector<Student>& list) {
 	for (auto stud : list) {
 		string fullname;
 		fullname = stud.fName + " " + stud.lName;
-		cout << setw(20) << left << fullname << fixed << setprecision(2) << setw(6) << right << stud.grade1 ;
-		cout << "  " << setw(6) << right << stud.grade2 << "  " << setw(6) << right << stud.grade3 << "  "; 
-		cout << setw(6) << right << stud.grade4 << "  " << setw(6) << right << stud.grade5 << "  " << setw(6) << right << stud.gradeAvg << endl;
+		cout << setw(20) << left << fullname << fixed << setprecision(2) << setw(6) << right;
+		cout << stud.grade1 << "  " << setw(6) << right << stud.grade2 << "  " << setw(6) << right;
+		cout << stud.grade3 << "  " << setw(6) << right << stud.grade4 << "  " << setw(6) << right;
+		cout << stud.grade5 << "  " << setw(6) << right << stud.gradeAvg << endl;
 	}
 
 	return;
@@ -121,9 +122,10 @@ void OpenCIT1350(vector<Student>& list) {
 	for (auto stud : list) {
 		string fullname;
 		fullname = stud.fName + " " + stud.lName;
-		cout << setw(20) << left << fullname << fixed << setprecision(2) << setw(6) << right << stud.grade1;
-		cout << "  " << setw(6) << right << stud.grade2 << "  " << setw(6) << right << stud.grade3 << "  ";
-		cout << setw(6) << right << stud.grade4 << "  " << setw(6) << right << stud.grade5 << "  " << setw(6) << right << stud.gradeAvg << endl;
+		cout << setw(20) << left << fullname << fixed << setprecision(2) << setw(6) << right; 
+		cout << stud.grade1 << "  " << setw(6) << right << stud.grade2 << "  " << setw(6) << right ;
+		cout << stud.grade3 << "  " << setw(6) << right << stud.grade4 << "  " << setw(6) << right;
+		cout << stud.grade5 << "  " << setw(6) << right << stud.gradeAvg << endl;
 	}
 	return;
 }
