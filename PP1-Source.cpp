@@ -87,11 +87,12 @@ void OpenCIT1325(vector<Student>& list) {
 		list.push_back(s1);
 	} while (inFile.good());
 
-
 	for (auto stud : list) {
 		string fullname;
 		fullname = stud.fName + " " + stud.lName;
-		cout << setw(20) << left << fullname << fixed << setprecision(1) << stud.grade1 << "  " << stud.grade2 << "  " << stud.grade3 << "  " << stud.grade4 << "  " << stud.grade5 << "  " << stud.gradeAvg << endl;
+		cout << setw(20) << left << fullname << fixed << setprecision(2) << setw(6) << right << stud.grade1 ;
+		cout << "  " << setw(6) << right << stud.grade2 << "  " << setw(6) << right << stud.grade3 << "  "; 
+		cout << setw(6) << right << stud.grade4 << "  " << setw(6) << right << stud.grade5 << "  " << setw(6) << right << stud.gradeAvg << endl;
 	}
 
 	return;
@@ -120,7 +121,9 @@ void OpenCIT1350(vector<Student>& list) {
 	for (auto stud : list) {
 		string fullname;
 		fullname = stud.fName + " " + stud.lName;
-		cout << setw(20) << left << fullname << fixed << setprecision(1) << stud.grade1 << "  " << stud.grade2 << "  " << stud.grade3 << "  " << stud.grade4 << "  " << stud.grade5 << "  " << stud.gradeAvg << endl;
+		cout << setw(20) << left << fullname << fixed << setprecision(2) << setw(6) << right << stud.grade1;
+		cout << "  " << setw(6) << right << stud.grade2 << "  " << setw(6) << right << stud.grade3 << "  ";
+		cout << setw(6) << right << stud.grade4 << "  " << setw(6) << right << stud.grade5 << "  " << setw(6) << right << stud.gradeAvg << endl;
 	}
 	return;
 }
